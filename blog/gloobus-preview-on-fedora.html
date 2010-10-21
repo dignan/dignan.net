@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8"> 
+    <title>Gloobus-Preview on Fedora</title>
+    <link rel="stylesheet" type="text/css" href="../main.css" />
+</head>
+<body>
+  <div id="main">
+    <div id="title_area">
+        <p>Patrick Dignan</p>
+    </div>     
+    <div id="link_bar">
+      <ul id="links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="projects/">Projects</a></li>
+        <li><a href="Resume_of_Patrick_Dignan.pdf">Resume</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div id="entry_title" style="text-align: left;">
+      <p style="float: right; font-size: 14px;">2009-07-24 08:57</p>
+      <p>Gloobus-Preview on Fedora</p>
+      <span style="clear: both;"></span>
+    </div>  
+    <div id="entry">
+      <p>Gloobus-Preview is fairly easy to install if you have a Fedora-based system. It is currently in the updates-testing repository for Fedora 12. This means that it has not been tested enough to be put into the stable release yet, so you have been warned. That aside, it works well for me!</p>
+
+      <p>To install, simply type:</p>
+      <p class="code">
+        sudo yum install --enablerepo=updates-testing gloobus-preview
+      </p>
+
+      <p>There are two commands in /usr/share/doc/gloobus-preview-0.4.1/README.fedora that enable a keybinding so that whenever Control+Space is pressed, gloobus is launched.</p>
+
+      <p>Without patching Nautilus (the default file browser for Gnome), it is unfortunately necessary to copy files to clipboard before viewing them.</p>
+      
+      <p>After installing gloobus-preview and running the two commands in the README file, gloobus-preview can easily be run by selecting a file or folder, and pressing Control+C then Control+Space.</p>
+
+      <p>Work is being done to remove the necessity of copying the file to clipboard before viewing it.</p>
+    </div>
+  </div>
+</body>
+

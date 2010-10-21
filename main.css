@@ -1,10 +1,21 @@
 html, body {
-  background-color: #80C8FE;
+  background-color: #002323;
   height: 100%;
+  color: #FFFFFF;
+}
+
+a {
+  text-decoration: none;
+  color: #279A9A;
+}
+
+.code {
+  background-color: #AC652B;
+  font-family: Courier;
+  padding: 10px;
 }
 
 #main {
-  background-color: #BFE3FE;
   width: 600px;
   height: 100%;
   margin-left: auto;
@@ -12,8 +23,7 @@ html, body {
 }
 
 #links {
-  background-color: #00477D;
-  height: 3em;
+  height: 30px;
   list-style: none;
   margin: 0px;
   padding: 0px;
@@ -22,22 +32,36 @@ html, body {
 #links li {
   display: inline;
   float: left;
+  font-family: Copperplate Gothic Light, sans-serif;
 }
 
 #links li a {
   display: block;
   color: #FFFFFF;
-  text-decoration: none;
-  height: 3em;
+  height: 40px;
   padding: 0px 10px;
-  line-height: 3em;
+  line-height: 40px;
 }
 
 #links li:hover {
   background-color: #0066B3;
 }
 
-#description {
+#entry, #description {
   clear: both;
   margin: 10px;
+  font-family: Arial,Helvetica,sans-serif;;
+  color: white;
+  font-size: 16px;
+  line-height: 24px;
+  padding-top: 10px; 
+}
+
+#entry_title {
+  font-size: 25px;
+}
+
+#title_area {
+  font-size: 25px; 
+  text-align: right;
 }
