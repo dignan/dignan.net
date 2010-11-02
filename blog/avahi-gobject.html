@@ -1,62 +1,33 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-    <meta charset="UTF-8"> 
-    <title>Gloobus-Preview on Fedora</title>
-    <link rel="stylesheet" type="text/css" href="../main.css" />
-</head>
-<body>
-  <div id="main">
-    <div id="title_area">
-        <p>Patrick Dignan</p>
-    </div>     
-    <div id="link_bar">
-      <ul id="links">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../blog.html">Blog</a></li>
-        <li><a href="../project.html">Projects</a></li>
-        <li><a href="../Resume_of_Patrick_Dignan.pdf">Resume</a></li>
-        <li><a href="../contact.html">Contact</a></li>
-      </ul>
-    </div>
-    <div id="entry_title" style="text-align: left;">
-      <p style="float: right; font-size: 14px;">2009-07-24 08:57</p>
-      <p>Gloobus-Preview on Fedora</p>
-      <span style="clear: both;"></span>
-    </div>  
-    <div id="entry">
-      <p>While working on my plugin for Rhythmbox written in Vala, I found what I think is a documentation bug in Avahi.</p>
+<div id="entry">
+  <p>While working on my plugin for Rhythmbox written in Vala, I found what I think is a documentation bug in Avahi.</p>
 
-      <p>When using the Avahi.Client class, you must execute .start(); before using the client, because the start() method instantiates the raw AvahiClient within the Client object.</p>
+  <p>When using the Avahi.Client class, you must execute .start(); before using the client, because the start() method instantiates the raw AvahiClient within the Client object.</p>
 
-      <p>So, for example, you must do this:</p>
+  <p>So, for example, you must do this:</p>
 
-      <p class="code">
-        using Avahi;<br/>
-        using Glib; <br/>
-        <br/>
-        public class Test {<br/>
-        &nbsp;&nbsp;public static void main (string[] args) {<br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;Client c = new Client();<br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;EntryGroup g = new EntryGroup();<br/> 
-        <br/>    
-        &nbsp;&nbsp;&nbsp;&nbsp;try {<br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c.start();<br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;} catch (Avahi.Error e) { <br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// handle error<br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;}<br/>
-        <br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;try {<br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;g.attach(c);<br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;} catch (Avahi.Error e) {<br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//handle error<br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;}<br/>
-        &nbsp;&nbsp;}<br/>
-        }<br/>
-      </p>  
+  <p class="code">
+    using Avahi;<br/>
+    using Glib; <br/>
+    <br/>
+    public class Test {<br/>
+    &nbsp;&nbsp;public static void main (string[] args) {<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;Client c = new Client();<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;EntryGroup g = new EntryGroup();<br/> 
+    <br/>    
+    &nbsp;&nbsp;&nbsp;&nbsp;try {<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c.start();<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;} catch (Avahi.Error e) { <br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// handle error<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+    <br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;try {<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;g.attach(c);<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;} catch (Avahi.Error e) {<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//handle error<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+    &nbsp;&nbsp;}<br/>
+    }<br/>
+  </p>  
 
-      <p>Otherwise, you get assertion errors, and the program will crash!</p>
-    </div>
-  </div>
-</body>
-
+  <p>Otherwise, you get assertion errors, and the program will crash!</p>
+</div>
