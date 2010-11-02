@@ -47,18 +47,19 @@ a {
   background-color: #0066B3;
 }
 
-#entry, #description {
+.entry, #description {
   clear: both;
   margin: 10px;
   font-family: Arial,Helvetica,sans-serif;
   color: white;
   font-size: 16px;
   line-height: 24px;
-  padding-top: 10px; 
+  padding-top: 20px; 
 }
 
 #entry_title {
   font-size: 25px;
+  padding: 10px;
 }
 
 #title_area {
