@@ -1,11 +1,11 @@
-ad = "dignan";
-ad += ".";
-ad += "patrick";
-ad += "@";
-ad += "gmail";
-ad += ".";
-ad += "com";
-
 window.onload = function () {
-document.getElementById("email").innerHTML = ad;
+	var ad = "dignan";
+	ad += ".";
+	ad += "patrick";
+	ad += "@";
+	ad += "gmail";
+	ad += ".";
+	ad += "com";
+
+	document.getElementById("email").innerHTML = ad;
 }
